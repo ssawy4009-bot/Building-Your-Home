@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Account Registration</title>
+    <link rel="stylesheet" href="css/sign-up.1.css">
+</head>
+<body>
+    <div class="background-slider"></div>
+    
+    <div class="welcome-section">
+        <h1 class="welcome-title">Welcome BuildYourHome</h1>
+        <p class="welcome-subtitle">We're here to help you build your dream home. Start your journey with us today.</p>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Create New Account</h1>
+            <p>Fill out the form below to create your account</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="step" id="step-1-indicator">1</div>
+            <div class="step" id="step-2-indicator">2</div>
+            <div class="step" id="step-3-indicator">3</div>
+            <div class="step" id="step-4-indicator">4</div>
+        </div>
+        
+        <form id="registrationForm">
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" id="step-1">
+                <h2 style="margin-bottom: 20px; color: #2c3e50; font-size: 20px;">Personal Information</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-next" onclick="nextStep(1)">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Account Details -->
+            <div class="form-step" id="step-2">
+                <h2 style="margin-bottom: 20px; color: #2c3e50; font-size: 20px;">Account Details</h2>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev" onclick="prevStep(2)">Previous</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(2)">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Project Information -->
+            <div class="form-step" id="step-3">
+                <h2 style="margin-bottom: 20px; color: #2c3e50; font-size: 20px;">Project Information</h2>
+                
+                <div class="form-group">
+                    <label for="projectType">Project Type</label>
+                    <select id="projectType" name="projectType">
+                        <option value="" disabled selected>Select project type</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="industrial">Industrial</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Estimated Budget ($)</label>
+                    <input type="text" id="budget" name="budget" placeholder="Enter your budget">
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">Project Timeline (months)</label>
+                    <input type="text" id="timeline" name="timeline" placeholder="Enter your timeline">
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev" onclick="prevStep(3)">Previous</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep(3)">Next</button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Preferences and Agreements -->
+            <div class="form-step" id="step-4">
+                <h2 style="margin-bottom: 20px; color: #2c3e50; font-size: 20px;">Preferences and Agreements</h2>
+                
+                <div class="form-group">
+                    <label>Communication Preferences</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="receiveEmails" name="receiveEmails" checked>
+                        <label for="receiveEmails">I agree to receive email messages</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="receiveSMS" name="receiveSMS">
+                        <label for="receiveSMS">I agree to receive SMS messages</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="serviceType">Required Service Type</label>
+                    <select id="serviceType" name="serviceType">
+                        <option value="" disabled selected>Select service type</option>
+                        <option value="design">Architectural Design</option>
+                        <option value="construction">Construction</option>
+                        <option value="consultation">Engineering Consultation</option>
+                        <option value="investment" selected>Investment</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="shareProjects" name="shareProjects">
+                        <label for="shareProjects">I want to share my projects in the gallery</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Upload Official Document (Optional)</label>
+                    <div class="file-upload">
+                        <label class="file-upload-btn">
+                            Choose File
+                            <input type="file" id="document" name="document" accept=".pdf,.jpg,.png">
+                        </label>
+                        <div class="file-name" id="fileName">No file chosen</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Agreements</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                        <label for="agreeTerms">I agree to the Terms of Use and Privacy Policy</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeDataUsage" name="agreeDataUsage">
+                        <label for="agreeDataUsage">I agree to use my data to improve services</label>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev" onclick="prevStep(4)">Previous</button>
+                    <button type="submit" class="btn btn-submit">Create Account</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/sign-up.1.js"></script>
+</body>
+</html>

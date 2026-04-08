@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildYourHome - Property Types</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="property-types.css">
+    <link rel="stylesheet" href="css/Property-Types.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex items-center">
+              <span class="text-2xl font-bold text-[#2F4858]">🏠 Build your home</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link text-gray-700 hover:text-[#00A884]">Home</a>
+            <a href="Property%20Types.html" class="nav-link text-gray-700 hover:text-[#00A884]">Property Types</a>
+            <a href="New%20Design%20garaly.2.html" class="nav-link text-gray-700 hover:text-[#00A884]">Design Gallery</a>
+            <a href="index.html#building-tips" class="nav-link text-gray-700 hover:text-[#00A884]">Building Tips</a>
+            <a href="index.html#consultation" class="nav-link text-gray-700 hover:text-[#00A884]">Free Consultation</a>
+            <a href="index.html#start-designing" class="nav-link text-gray-700 hover:text-[#00A884]">Start Designing</a>
+            <a href="sign%20up.1.html" class="nav-link text-gray-700 hover:text-[#00A884]">SignUp</a>
+            <a href="Login.1.html" class="nav-link text-gray-700 hover:text-[#00A884]">Log in</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <!-- Main Title & Description -->
+    <section class="cta-banner">
+      <div class="cta-content">
+        <h2>🏠 Find Your Perfect Smart Home Design</h2>
+        <p>Choose the property type, specify the space and budget, and let provide you with a unique design that suits you.</p>
+        <a href="#" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-4 justify-center items-center mb-10 px-4">
+      <div>
+        <label class="block text-gray-700 font-semibold mb-1">Area (m²)</label>
+        <select class="rounded-lg border-gray-300 focus:ring-[#00A884] focus:border-[#00A884]">
+          <option>&lt;50m²</option>
+          <option>&lt;65m²</option>
+          <option>&lt;80m²</option>
+          <option>&lt;100m²</option>
+          <option>&lt;150m²</option>
+          <option>&lt;160m²</option>
+          <option>&lt;180m²</option>
+          <option>100–200m²</option>
+          <option>&gt;250m²</option>
+          <option>100–275m²</option>
+          <option>100–300m²</option>
+          <option>100–350m²</option>
+          <option>100–400m²</option>
+          <option>100–700m²</option>
+          <option>100–+1000m²</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-semibold mb-1">Style</label>
+        <select class="rounded-lg border-gray-300 focus:ring-[#00A884] focus:border-[#00A884]">
+          <option>Modern</option>
+          <option>Scandinavian</option>
+          <option>Minimalist</option>
+          <option>Contemporary</option>
+          <option>Minimal</option>
+          <option>Classic</option>
+          <option>Bohemian </option>
+          <option>Rustic</option>
+          <option>Industrial </option>
+          <option>Eclectic </option>
+          <option>Mediterranean</option>
+          <option>Smart </option>
+          <option>According to the customer's taste</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-semibold mb-1">Budget</label>
+        <select class="rounded-lg border-gray-300 focus:ring-[#00A884] focus:border-[#00A884]">
+          <option>100,000</option>
+          <option>250,000</option>
+          <option>150,000</option>
+          <option>400,000</option>
+          <option>500,000</option>
+          <option>600,000</option>
+          <option>900,000</option>
+          <option>1,200,000</option>
+          <option>2,000,000 </option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Property Types Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid md:grid-cols-3 gap-8 property-types-scroll">
+        <!-- Apartment -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏢</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Apartment</h3>
+          <p class="text-gray-500 mb-3">Smart solutions for small spaces and city living.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Smart planning saves space</li>
+            <li>Remotely controlled lighting and air conditioning</li>
+            <li>Smart storage and multi-purpose furniture</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">View Designs</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+        <!-- Villa -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏡</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Villa</h3>
+          <p class="text-gray-500 mb-3">Multi-story comfort and luxury with comprehensive smart control.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Control each floor on an independent level</li>
+            <li>Smart pool, automatic blinds, and cinema rooms</li>
+            <li>High-security systems + solar energy integration</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">View Designs</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+        <!-- Duplex -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏘</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Duplex</h3>
+          <p class="text-gray-500 mb-3">Combining privacy and modern technology on two floors.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Separate design for each floor</li>
+            <li>Privacy for each floor and ease of control and communication</li>
+            <li>Manage energy consumption between levels</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">View Designs</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+        <!-- Country House -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏞️</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Country House</h3>
+          <p class="text-gray-500 mb-3">A hybrid design that blends nature and technology.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Solar energy, water control, and natural ventilation</li>
+            <li>Artificial intelligence to manage a peaceful lifestyle</li>
+            <li>Natural & sustainable solutions</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">View Designs</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+        <!-- Studio -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏙️</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Studio</h3>
+          <p class="text-gray-500 mb-3">Space partitioning using smart walls and appliances.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Space partitioning using smart walls</li>
+            <li>Multifunctional smart home appliances</li>
+            <li>Automatic air conditioning based on presence</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">View Designs</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+        <!-- Custom -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start hover:shadow-2xl transition property-card-custom">
+          <div class="text-3xl mb-2">🏠</div>
+          <h3 class="text-xl font-bold text-[#2F4858] mb-1">Custom</h3>
+          <p class="text-gray-500 mb-3">Designed to suit your personality and needs.</p>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Unlimited possibilities with the integration of AI</li>
+            <li>Unique and innovative ideas just for you</li>
+            <li>Personalized, innovative ideas</li>
+          </ul>
+          <div class="flex gap-2 mt-auto">
+            <a href="#" class="bg-[#00A884] text-white px-4 py-2 rounded-lg font-semibold transition cta-custom">Start Custom Design</a>
+            <a href="#" class="bg-gray-100 text-[#00A884] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Begin Your Journey</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Build Your Home</h3>
+            <p class="text-gray-400">Your dream home starts here.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white">Apartments</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Villas</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Duplex Apartments</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Country Homes</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Frequently Asked Questions</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Contact us</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>Copyright 2024 BuildYourHome. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

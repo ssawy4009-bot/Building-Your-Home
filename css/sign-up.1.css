@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            font-size: 16px; /* Increased base font size */
+        }
+        
+        /* Golden text section on the left */
+        .welcome-section {
+            position: fixed;
+            left: 40px;
+            top: 40px;
+            max-width: 500px;
+            z-index: 10;
+        }
+        
+        .welcome-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #f49208;
+            margin-bottom: 15px;
+            text-align: left;
+            line-height: 1.2;
+        }
+        
+        .welcome-subtitle {
+            font-size: 1.4rem; /* Slightly larger */
+            color: #ffffff;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
+        .background-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: slideBackground 18s infinite;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+        }
+        
+        @keyframes slideBackground {
+            0%, 100% { background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); }
+            33% { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); }
+            66% { background-image: url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); }
+        }
+        
+        /* Registration form container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 650px; /* Slightly wider */
+            padding: 30px;
+            margin: 30px;
+            margin-left: auto; /* Push to right */
+            border: 1px solid #e0e0e0;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px; /* Larger heading */
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px; /* Larger text */
+        }
+        
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .progress-bar:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ecf0f1;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        
+        .step {
+            width: 35px; /* Larger steps */
+            height: 35px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            color: #7f8c8d;
+            font-weight: bold;
+            font-size: 16px; /* Larger step numbers */
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .step.active {
+            background-color: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .step.completed {
+            background-color: #2ecc71;
+            color: white;
+            border-color: #2ecc71;
+        }
+        
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px; /* More spacing */
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600; /* Bolder labels */
+            color: #2c3e50;
+            font-size: 16px; /* Larger labels */
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px; /* Larger inputs */
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px; /* Larger text in inputs */
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px; /* More spacing between columns */
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-group input {
+            width: 18px; /* Larger checkboxes */
+            height: 18px;
+            margin-right: 10px;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+            font-size: 15px; /* Slightly larger */
+        }
+        
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px; /* More spacing */
+        }
+        
+        .btn {
+            padding: 12px 25px; /* Larger buttons */
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px; /* Larger button text */
+            font-weight: 600; /* Bolder buttons */
+            transition: all 0.3s ease;
+        }
+        
+        .btn-next {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .btn-next:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-prev {
+            background-color: #95a5a6;
+            color: white;
+        }
+        
+        .btn-prev:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+        }
+        
+        .btn-submit {
+            background-color: #2ecc71;
+            color: white;
+            width: 100%;
+        }
+        
+        .btn-submit:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+        
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-upload-btn {
+            border: 2px dashed #3498db;
+            color: #3498db;
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-btn:hover {
+            background-color: #e9ecef;
+        }
+        
+        .file-upload input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .file-name {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 992px) {
+            .welcome-section {
+                position: static;
+                padding: 20px;
+                text-align: center;
+                max-width: 100%;
+            }
+            
+            .container {
+                margin: 20px auto;
+                float: none;
+                width: 95%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            
+            .welcome-title {
+                font-size: 2.8rem;
+            }
+            
+            .welcome-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .step {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .welcome-title {
+                font-size: 2.2rem;
+            }
+            
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px 12px;
+                font-size: 15px;
+            }
+        }
